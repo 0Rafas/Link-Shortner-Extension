@@ -1,0 +1,238 @@
+/* popup.css - Dark Purple Theme */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #1e1a26; /* Very dark purple base */
+    color: #e0e0e0; /* Light grey text */
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    overflow: hidden;
+    border: 1px solid #3a314a; /* Darker purple border */
+    border-radius: 6px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #2c2538; /* Slightly lighter purple header */
+    padding: 10px 15px;
+    border-bottom: 1px solid #3a314a;
+    border-radius: 6px 6px 0 0;
+}
+
+.logo {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    opacity: 0.8;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    flex-grow: 1;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #252030; /* Main content purple */
+}
+
+label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #a095b7; /* Lighter purple label */
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="url"],
+input[type="text"] {
+    background-color: #1e1a26; /* Base dark purple */
+    border: 1px solid #3a314a;
+    border-radius: 4px;
+    color: #e0e0e0;
+    padding: 10px 12px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: calc(100% - 26px); /* Account for padding/border */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder {
+    color: #6a617d;
+}
+
+input:focus {
+    outline: none;
+    border-color: #9b59b6; /* Brighter purple focus */
+    box-shadow: 0 0 0 1px #9b59b6;
+}
+
+#shortenButton {
+    background-color: #8e44ad; /* Main purple button */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#shortenButton:hover {
+    background-color: #9b59b6; /* Lighter purple hover */
+}
+
+#shortenButton:disabled {
+    background-color: #523061;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.output-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.output-container input[type="text"] {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 8px;
+    width: calc(100% - 60px); /* Adjust width considering button */
+}
+
+#copyButton {
+    background: none;
+    border: 1px solid #4a415c; /* Subtle border */
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#copyButton svg {
+    fill: #a095b7; /* Icon color */
+    transition: fill 0.2s ease;
+}
+
+#copyButton:hover {
+    background-color: #3a314a;
+    border-color: #6a617d;
+}
+
+#copyButton:hover svg {
+    fill: #e0e0e0;
+}
+
+#copyButton:active {
+    background-color: #4a415c;
+}
+
+#errorMessage {
+    color: #e74c3c; /* Red for errors */
+    font-size: 12px;
+    min-height: 15px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.footer {
+    padding: 10px 15px;
+    background-color: #2c2538;
+    border-top: 1px solid #3a314a;
+    border-radius: 0 0 6px 6px;
+    text-align: right;
+}
+
+#creditsButton {
+    background: none;
+    border: none;
+    color: #a095b7;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.2s ease;
+}
+
+#creditsButton:hover {
+    color: #ffffff;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #2c2538; /* Match header/footer */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 0;
+    border: 1px solid #3a314a;
+    width: 80%; /* Could be more specific */
+    max-width: 300px;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.close-button {
+    color: #a095b7;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.credits-body {
+    padding: 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.credits-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+

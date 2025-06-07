@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Quick Shortener</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="icons/icon16.png" alt="Icon" class="logo">
+            <span class="title">Quick Link Shortener</span>
+        </div>
+        <div class="content">
+            <label for="originalUrl">Enter URL to shorten:</label>
+            <input type="url" id="originalUrl" placeholder="https://example.com/very/long/url">
+            <button id="shortenButton">Shorten</button>
+            
+            <label for="shortenedUrl">Shortened URL:</label>
+            <div class="output-container">
+                <input type="text" id="shortenedUrl" readonly placeholder="Shortened link appears here">
+                <button id="copyButton" title="Copy shortened URL">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                        <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="errorMessage"></div>
+        </div>
+        <div class="footer">
+            <button id="creditsButton">Credits</button>
+        </div>
+    </div>
+
+    <div id="creditsModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModalButton" class="close-button">&times;</button>
+            <div class="credits-body">
+                 <img id="helloKittyIcon" src="icons/hellokitty.png" alt="Hello Kitty" class="credits-icon">
+                 <span>Coded By Rafas</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
+
