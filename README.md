@@ -1,6 +1,6 @@
 #  📥 The Tutorial
-First,
-**enable Developer Mode in the Extensions settings of your browser to allow adding custom files to the browser.**
+**First,
+enable Developer Mode in the Extensions settings of your browser to allow adding custom files to the browser.**
 
 **Second,
 extract Icons.7z and convert it into a regular folder.
