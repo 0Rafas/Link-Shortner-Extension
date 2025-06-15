@@ -1,4 +1,6 @@
-![url_shortener_mockup](https://github.com/user-attachments/assets/42e46217-4de6-4cdd-9d0b-d08dc82451be)## 🍭 Installation
+![url_shortener_mockup](https://github.com/user-attachments/assets/42e46217-4de6-4cdd-9d0b-d08dc82451be)
+
+## 🍭 Installation
 
 1. **Download the Repository**
    - Clone the repository or download it as a ZIP file.
