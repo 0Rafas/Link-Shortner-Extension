@@ -19,5 +19,4 @@ the extension Cannot Short the links who Has Captcha Method !!
 
 # 👤 Credits
 Ksr & Rafas!
-[Uploading url_shortener_mockup.png…](Show)
 
